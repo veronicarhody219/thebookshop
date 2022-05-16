@@ -113,12 +113,12 @@
           />
         </div>
         <div class="form-row">
-          <label for="surname" class="form-label">Surname</label>
+          <label for="house" class="form-label">house</label>
           <input
             required
             minlength="5"
             type="text"
-            id="surname"
+            id="house"
             class="form-input"
             placeholder="Doe"
           />
@@ -134,45 +134,30 @@
           />
         </div>
         <div class="form-row">
-          <label for="surname" class="form-label">Surname</label>
+          <label for="street" class="form-label">Street</label>
           <input
             required
             minlength="5"
             type="text"
-            id="surname"
+            id="street"
             class="form-input"
-            placeholder="Doe"
           />
         </div>
         <div class="form-row">
-          <label for="surname" class="form-label">Surname</label>
-          <input
-            required
-            minlength="5"
-            type="text"
-            id="surname"
-            class="form-input"
-            placeholder="Doe"
-          />
+          <label for="house" class="form-label">House number</label>
+          <input required type="number" min="0" id="house" class="form-input" />
         </div>
         <div class="form-row">
-          <label for="surname" class="form-label">Surname</label>
-          <input
-            required
-            minlength="5"
-            type="text"
-            id="surname"
-            class="form-input"
-            placeholder="Doe"
-          />
+          <label for="flat" class="form-label">Flat number</label>
+          <input required type="tel" min="0" id="flat" class="form-input" />
         </div>
         <div class="form-row">
-          <label for="surname" class="form-label">Surname</label>
+          <label for="house" class="form-label">house</label>
           <input
             required
             minlength="5"
             type="text"
-            id="surname"
+            id="house"
             class="form-input"
             placeholder="Doe"
           />
@@ -187,10 +172,23 @@
           />
         </div>
         <div class="form-row">
-          <label for="address" class="form-label">Address</label>
+          <label for="payment-type" class="form-label">Cash</label>
           <input
-            type="text"
-            id="address"
+            required
+            type="radio"
+            id="payment-type"
+            value="
+            Cash"
+            class="form-input"
+            placeholder="New York"
+          />
+          <label for="payment-type" class="form-label">Card</label>
+          <input
+            required
+            type="radio"
+            id="payment-type"
+            value="
+            Card"
             class="form-input"
             placeholder="New York"
           />
