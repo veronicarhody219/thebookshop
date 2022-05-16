@@ -6,7 +6,7 @@ const bookPrice = document.querySelector(".book--price");
 const bookDecs = document.querySelector(".book--desc");
 
 async function getData() {
-  const response = await fetch("http://localhost:8080/bookInfo/books.json", {
+  const response = await fetch("./bookInfo/books.json", {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",

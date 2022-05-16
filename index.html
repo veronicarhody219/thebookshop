@@ -102,12 +102,64 @@
       <form action="" class="form">
         <h3>Billing information</h3>
         <div class="form-row">
-          <label for="name" class="form-label">Full name</label>
+          <label for="first-name" class="form-label">First name</label>
           <input
+            required
+            minlength="4"
             type="text"
-            id="name"
+            id="firs-tname"
             class="form-input"
-            placeholder="John Doe"
+            placeholder="John"
+          />
+        </div>
+        <div class="form-row">
+          <label for="house" class="form-label">house</label>
+          <input
+            required
+            minlength="5"
+            type="text"
+            id="house"
+            class="form-input"
+            placeholder="Doe"
+          />
+        </div>
+        <div class="form-row">
+          <label for="delivery-date" class="form-label">Delivery date</label>
+          <input
+            required
+            minlength="5"
+            type="date"
+            id="delivery-date"
+            class="form-input"
+          />
+        </div>
+        <div class="form-row">
+          <label for="street" class="form-label">Street</label>
+          <input
+            required
+            minlength="5"
+            type="text"
+            id="street"
+            class="form-input"
+          />
+        </div>
+        <div class="form-row">
+          <label for="house" class="form-label">House number</label>
+          <input required type="number" min="0" id="house" class="form-input" />
+        </div>
+        <div class="form-row">
+          <label for="flat" class="form-label">Flat number</label>
+          <input required type="tel" min="0" id="flat" class="form-input" />
+        </div>
+        <div class="form-row">
+          <label for="house" class="form-label">house</label>
+          <input
+            required
+            minlength="5"
+            type="text"
+            id="house"
+            class="form-input"
+            placeholder="Doe"
           />
         </div>
         <div class="form-row">
@@ -120,12 +172,25 @@
           />
         </div>
         <div class="form-row">
-          <label for="address" class="form-label">Address</label>
+          <label for="payment-type" class="form-label">Cash</label>
           <input
-            type="text"
-            id="address"
+            required
+            type="radio"
+            id="payment-type"
+            value="
+            Cash"
             class="form-input"
-            placeholder="New York"
+          
+          />
+          <label for="payment-type" class="form-label">Card</label>
+          <input
+            required
+            type="radio"
+            id="payment-type"
+            value="
+            Card"
+            class="form-input"
+           
           />
         </div>
         <div class="form-row">
