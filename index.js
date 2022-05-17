@@ -23,6 +23,7 @@ async function getData() {
         <h3 class="book--title">${item.title}</h3>
         <p class="book--author"><strong>${item.author}</strong></p>
         <p class="book--price">Price: $${item.price}</p>
+        <button class="btn-hipster btn">Show more</button>
         <button class="btn">Add to card</button>
         <p class="book--desc hide">${item.description}</p>
         </div>
@@ -41,3 +42,12 @@ getData();
 function responsiveNav() {
   const nav = document.querySelector("#nav");
 }
+
+// date in form
+const dateInForm = document.getElementById("delivery-date");
+function dateDefault() {
+  const currentDate = new Date();
+  currentDate.setDate(currentDate.getDate() + 1);
+  dateInForm.valueAsDate = currentDate;
+}
+dateInForm.addEventListener("click", dateDefault());

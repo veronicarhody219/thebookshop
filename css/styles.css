@@ -230,7 +230,8 @@ ul {
   flex: 1 100%;
 }
 
-.book--container:hover {
+.book--container:hover,
+form:hover {
   cursor: pointer;
   border-radius: 50px;
   background: linear-gradient(145deg, #e3dee1, #ffffff);
@@ -294,8 +295,9 @@ ul {
   background: var(--primary-100);
 }
 .btn-hipster:hover {
-  color: var(--primary-100);
-  background: var(--primary-700);
+  color: var(--primary-700);
+  background: var(--primary-200);
+  box-shadow: var(--box-shadow-3);
 }
 .btn-block {
   width: 100%;
@@ -326,12 +328,28 @@ ul {
   padding: 2rem 2.5rem;
   margin: 3rem auto;
 }
+
 .form-label {
   display: block;
   font-size: var(--smallText);
   margin-bottom: 0.5rem;
   text-transform: capitalize;
   letter-spacing: var(--letterSpacing);
+}
+.form-radio {
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.checkbox-container {
+  display: inline-block;
+  align-items: center;
+}
+.form-checkbox {
+  display: flex;
+  flex-direction: column;
 }
 .form-input,
 .form-textarea {

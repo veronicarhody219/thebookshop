@@ -149,19 +149,9 @@
         </div>
         <div class="form-row">
           <label for="flat" class="form-label">Flat number</label>
-          <input required type="tel" min="0" id="flat" class="form-input" />
+          <input required type="number" min="0" id="flat" class="form-input" />
         </div>
-        <div class="form-row">
-          <label for="house" class="form-label">house</label>
-          <input
-            required
-            minlength="5"
-            type="text"
-            id="house"
-            class="form-input"
-            placeholder="Doe"
-          />
-        </div>
+
         <div class="form-row">
           <label for="email" class="form-label">Email</label>
           <input
@@ -171,27 +161,48 @@
             placeholder="JohnDoe@gmail.com"
           />
         </div>
-        <div class="form-row">
-          <label for="payment-type" class="form-label">Cash</label>
-          <input
-            required
-            type="radio"
-            id="payment-type"
-            value="
-            Cash"
-            class="form-input"
-          
-          />
-          <label for="payment-type" class="form-label">Card</label>
-          <input
-            required
-            type="radio"
-            id="payment-type"
-            value="
-            Card"
-            class="form-input"
-           
-          />
+        <div class="form-row form-radio">
+          <div class="radio-container">
+            <label for="payment-type" class="form-label">Cash </label>
+            <input
+              checked
+              type="radio"
+              id="payment-type"
+              value="
+                Cash"
+              class="form-input"
+            />
+          </div>
+          <div class="radio-container">
+            <label for="payment-type" class="form-label">Card </label>
+            <input
+              type="radio"
+              id="payment-type"
+              value="
+                Card"
+              class="form-input"
+            />
+          </div>
+        </div>
+        <div class="form-row form-checkbox">
+          <div class="checkbox-container">
+            <label for="gifts" class="form-label" >pack as a gift</label>
+            <input type="checkbox" class="form-input" id="gifts"/>
+          </div>
+          <div class="checkbox-container">
+            <label for="gifts" class="form-label">add postcard</label>
+            <input type="checkbox" class="form-input" id="gifts"/>
+          </div>
+          <div class="checkbox-container">
+            <label for="gifts" class="form-label"
+              >provide 2% discount to the next time</label
+            >
+            <input type="checkbox" class="form-input" id="gifts"/>
+          </div>
+          <div class="checkbox-container">
+            <label for="gifts" class="form-label">branded pen or pencil</label>
+            <input type="checkbox" class="form-input" id="gifts" />
+          </div>
         </div>
         <div class="form-row">
           <label for="textarea" class="form-label">Textarea</label>
