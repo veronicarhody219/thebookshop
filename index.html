@@ -33,7 +33,7 @@
         <ul class="nav" id="nav">
           <li><a href="#">Home</a></li>
           <li><a href="#">Buy</a></li>
-          <li><a href="#">Cart</a></li>
+          <li class="nav-cart show-number"><a href="#" >Cart</a></li>
           <li><a href="#">Subscriptions</a></li>
           <li><a href="#">Contact</a></li>
           <li>
@@ -44,12 +44,12 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="main">
       <section class="books">
         <div class="book--container">
           <div class="book--text-container">
             <h3 class="book--title">Welcome to serene wisdom</h3>
-            <p class="book--desc hide">
+            <p class="book--desc">
               Real world meticulously wraps all its knowledge into books, and
               then books in turn diligently open a whole new world of wisdom by
               the knowledge.
@@ -57,47 +57,7 @@
           </div>
         </div>
       </section>
-      <!-- <form class="form">
-        <h4>Order information</h4>
-        <div class="form-row">
-          <label for="name" class="form-label">Name</label>
-          <input
-            type="text"
-            placeholder="Your name"
-            id="name"
-            class="form-input"
-          />
-        </div>
-        <div class="form-row">
-          <label for="number" class="form-label">Number</label>
-          <input
-            type="number"
-            placeholder="Your number"
-            id="number"
-            class="form-input"
-          />
-        </div>
-        <div class="form-row">
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="email"
-            placeholder="Your email"
-            id="email"
-            class="form-input"
-          />
-          <small class="form-alert">please provide the value</small>
-        </div>
-        <div class="form-row">
-          <label for="textarea" class="form-label">Text area</label>
-          <textarea
-            name="textarea"
-            id="textarea"
-            class="form-textarea"
-            placeholder="Additional requirement for the order"
-          ></textarea>
-        </div>
-        <button type="buy now" class="btn btn-block">Submit</button>
-      </form> -->
+      
 
       <form action="" class="form">
         <h3>Billing information</h3>
@@ -216,6 +176,6 @@
         <button class="btn btn-block" type="submit">Buy now</button>
       </form>
     </main>
-    <script src="./index.js"></script>
+    <script defer src="./index.js"></script>
   </body>
 </html>

@@ -166,6 +166,7 @@ ul {
   justify-content: space-between;
   margin-top: 1.75em;
 }
+
 .logo {
   display: flex;
   flex-direction: row;
@@ -202,9 +203,13 @@ ul {
 .nav > * {
   padding: 0 1em;
 }
+.nav *:hover {
+  color: var(--primary-400);
+}
 .nav--hamburger {
   display: none;
 }
+
 /* books */
 .books {
   display: flex;
@@ -235,10 +240,37 @@ form:hover {
   cursor: pointer;
   border-radius: 50px;
   background: linear-gradient(145deg, #e3dee1, #ffffff);
-  box-shadow: 20px 20px 60px #d6d2d5, -20px -20px 60px #ffffff;
 }
-.hide {
+
+/* modal */
+.modal {
   display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(243, 223, 228, 0.4);
+}
+.modal.show {
+  display: block;
+}
+.modal-content {
+  margin: 15% auto;
+  padding: 1em 1em;
+  border-radius: 50px;
+  width: 80%;
+  background: #fce6e6;
+  box-shadow: 20px 20px 60px #d6c4c4, -20px -20px 60px #ffffff;
+}
+
+.close {
+  right: 1em;
+}
+.close:hover {
+  cursor: pointer;
 }
 .book--container:hover .book--desc {
   display: flex;

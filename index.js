@@ -4,6 +4,7 @@ const bookCover = document.querySelector(".book--cover");
 const bookAuthor = document.querySelector(".book--author");
 const bookPrice = document.querySelector(".book--price");
 const bookDecs = document.querySelector(".book--desc");
+const cartNav = document.querySelector(".nav-cart");
 
 async function getData() {
   const response = await fetch("./bookInfo/books.json", {
@@ -23,17 +24,16 @@ async function getData() {
         <h3 class="book--title">${item.title}</h3>
         <p class="book--author"><strong>${item.author}</strong></p>
         <p class="book--price">Price: $${item.price}</p>
-        <button class="btn-hipster btn">Show more</button>
-        <button class="btn">Add to card</button>
-        <p class="book--desc hide">${item.description}</p>
+        <button id="modalBtn" class="btn-hipster btn modalBtn">Show more</button>
+        <button class="btn cartBtn">Add to cart</button>
+        <div class="modal" id="modal">
+        <div  class="modal-content">
+        <span class="close">&times;</span>
+        <p class="book--desc">${item.description}</p>
+        </div>
         </div>
      </div>
       `;
-      // bookTitle.textContent = item.title;
-      // bookCover.src = item.imageLink;
-      // bookAuthor.textContent = item.author;
-      // bookPrice.textContent = "$" + item.price;
-      // bookDecs.textContent = item.description;
     })
     .join("");
 }
@@ -51,3 +51,39 @@ function dateDefault() {
   dateInForm.valueAsDate = currentDate;
 }
 dateInForm.addEventListener("click", dateDefault());
+
+// modal
+const modalContainer = document.querySelector(".books");
+
+console.log(modalContainer);
+
+let count = 0;
+modalContainer.addEventListener("click", function (e) {
+  if (e.target.classList.contains("modalBtn")) {
+    const modal = modalContainer.querySelector(".modal");
+    const span = modalContainer.querySelector("span");
+    //  show the modal
+    modal.style.display = "block";
+    // when click on (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
+    // when click outside the modal, close it
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  }
+  if (e.target.classList.contains("cartBtn")) {
+    // add to cart
+    const cartBtn = modalContainer.querySelector(".cartBtn");
+    console.log(cartBtn);
+    console.log(cartNav);
+    console.log(cartNav.textContent);
+    count++;
+    const currentNavContent = "Cart"
+    cartNav.textContent = currentNavContent + " (" + count + ")";
+   
+  }
+});
